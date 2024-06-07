@@ -1,16 +1,15 @@
-# task_manager_notes_app
+# Task Manager & Notes Mobile App
 
-A new Flutter project.
+Individuals can utilize a to-do list app with notes to organize and oversee their tasks and objectives. They can create, modify, and delete task lists, and add notes for each item. This app aids in organizing tasks, reducing stress, enhancing productivity, boosting creativity, and improving memory.
 
-## Getting Started
+The data is stored locally on the device using the sqflite Flutter package, which executes queries with SQL commands.
 
-This project is a starting point for a Flutter application.
+## Features
+-  Theme Customization - (Light/dark mode toggle)
+-  Separate groups for to-do lists
+-  Works in offline mode
+-  Cross platform - To be Made Available for Both Android and iOS devices
+-  Notification coming up soon
+-  Percentage indicator to check over all progress
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
