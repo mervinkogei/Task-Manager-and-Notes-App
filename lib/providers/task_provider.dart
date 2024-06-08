@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../models/user_task.dart';
 import '../helper/db_helper.dart';
+import '../models/user_task_model.dart';
 
 class TasksProvider extends ChangeNotifier {
   List<UserTask> _userTaskList = [];
