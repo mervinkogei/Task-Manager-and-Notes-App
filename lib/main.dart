@@ -14,7 +14,7 @@ import 'Widgets/app_theme.dart';
 import 'helper/scroll_behaviour.dart';
 import 'providers/auth.dart';
 import 'providers/notes_provider.dart';
-import 'providers/task_provider.dart';
+import 'providers/tasks_provider.dart';
 import 'providers/user_provider.dart';
 
 void main() async{

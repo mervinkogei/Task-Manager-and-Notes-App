@@ -3,7 +3,7 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
 
-import '../../providers/task_provider.dart';
+import '../../providers/tasks_provider.dart';
 import '/helper/notification_service.dart';
 
 class AddTask extends StatefulWidget {

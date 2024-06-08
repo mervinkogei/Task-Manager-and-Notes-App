@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
 
 import '../Widgets/drawer.dart';
-import '../providers/task_provider.dart';
+import '../providers/tasks_provider.dart';
 import '../providers/user_provider.dart';
 import '../screens/splash_screen.dart';
 import '../providers/auth.dart';

@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 
 import '../helper/notification_service.dart';
 import '../models/user_task_model.dart';
-import '../providers/task_provider.dart';
+import '../providers/tasks_provider.dart';
 
 class TaskBuilder extends StatefulWidget {
   final String? filter;
