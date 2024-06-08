@@ -8,7 +8,7 @@ import '../providers/user_provider.dart';
 import '../screens/splash_screen.dart';
 import '../providers/auth.dart';
 import '../providers/notes_provider.dart';
-import '../screens/tabs_screen.dart';
+// import '../screens/tabs_screen.dart';
 import '../helper/notification_service.dart';
 
 class UserDetailScreen extends StatefulWidget {
@@ -80,12 +80,12 @@ class _UserDetailScreenState extends State<UserDetailScreen> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(
-                      height: mediaQuery.size.height * 0.02,
-                    ),
+                    // SizedBox(
+                    //   height: mediaQuery.size.height * 0.02,
+                    // ),
                     InkWell(
                       onTap: () {
-                        changeAbout(context);
+                        changeAbout(userData, context);
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
@@ -105,11 +105,11 @@ class _UserDetailScreenState extends State<UserDetailScreen> {
                 ),
                 Column(
                   children: [
-                    customButton('Home', () {
-                      Navigator.of(context).pushReplacementNamed(
-                        Tabs.routeName,
-                      );
-                    }, const Icon(Icons.home), themeData),
+                    // customButton('Home', () {
+                    //   Navigator.of(context).pushReplacementNamed(
+                    //     Tabs.routeName,
+                    //   );
+                    // }, const Icon(Icons.home), themeData),
                     customButton('Light Mode', () {
                       userData.setTheme(false);
                     }, const Icon(Icons.sunny), themeData),
@@ -118,9 +118,9 @@ class _UserDetailScreenState extends State<UserDetailScreen> {
                     }, const Icon(Icons.nightlight), themeData),
                   ],
                 ),
-                customButton('Logout', () {
-                  confirmDialog(context);
-                }, const Icon(Icons.logout), Colors.red[300]!),
+                // customButton('Logout', () {
+                //   confirmDialog(context);
+                // }, const Icon(Icons.logout), Colors.red[300]!),
               ],
             ),
           ),
@@ -168,20 +168,20 @@ class _UserDetailScreenState extends State<UserDetailScreen> {
               const Padding(
                 padding: EdgeInsets.only(top: 90),
               ),
-              customButton('Home', () {
-                Navigator.of(context).pushReplacementNamed(
-                  Tabs.routeName,
-                );
-              }, const Icon(Icons.home), themeData),
+              // customButton('Home', () {
+              //   Navigator.of(context).pushReplacementNamed(
+              //     Tabs.routeName,
+              //   );
+              // }, const Icon(Icons.home), themeData),
               customButton('Light Mode', () {
                 userData.setTheme(false);
               }, const Icon(Icons.sunny), themeData),
               customButton('Dark Mode', () {
                 userData.setTheme(true);
               }, const Icon(Icons.nightlight), themeData),
-              customButton('Logout', () {
-                confirmDialog(context);
-              }, const Icon(Icons.logout), Colors.red[300]!),
+              // customButton('Logout', () {
+              //   confirmDialog(context);
+              // }, const Icon(Icons.logout), Colors.red[300]!),
             ],
           ),
         ),
@@ -226,7 +226,7 @@ class _UserDetailScreenState extends State<UserDetailScreen> {
     );
   }
 
-  void changeAbout(BuildContext context) async {
+  void changeAbout(UserProvider? userData, BuildContext context) async {
     final about = TextEditingController();
     final isLandscape =
         MediaQuery.of(context).orientation == Orientation.landscape;
@@ -258,9 +258,10 @@ class _UserDetailScreenState extends State<UserDetailScreen> {
                   child: TextField(
                     maxLength: 30,
                     maxLines: 1,
-                    decoration: const InputDecoration(
-                      label: Text('Add Description'),
-                      border: OutlineInputBorder(
+                    decoration:  InputDecoration(
+                      hintText: userData?.user.about,
+                      label:  userData?.user.about == null ? const Text('Add Description') : const Text('Add Description'),
+                      border: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(
                           Radius.circular(20),
                         ),

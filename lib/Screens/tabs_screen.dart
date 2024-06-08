@@ -135,7 +135,7 @@ class _TabsState extends State<Tabs> with SingleTickerProviderStateMixin {
           });
         },
       ),
-      floatingActionButton: Padding(
+      floatingActionButton: currentIndex != 3 ? Padding(
         padding: const EdgeInsets.only(bottom: 70),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -188,7 +188,7 @@ class _TabsState extends State<Tabs> with SingleTickerProviderStateMixin {
             ),
           ],
         ),
-      ),
+      ): null,
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       // extendBody: true,
       resizeToAvoidBottomInset: false,

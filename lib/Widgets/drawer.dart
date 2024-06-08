@@ -44,92 +44,88 @@ class _MyDrawerState extends State<MyDrawer> {
         child: ListView(
           padding: const EdgeInsets.all(0),
           children: [
-            Expanded(
-              child: DrawerHeader(
-                            padding: const EdgeInsets.all(0),
-                            margin: const EdgeInsets.all(0),
-                            decoration: BoxDecoration(color: themeData.primary),
-                            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                CircleAvatar(
-                  radius: 50,
-                  backgroundColor: themeData.secondary,
-                  backgroundImage: userData.user.image.isEmpty
-                      ? null
-                      : NetworkImage(userData.user.image),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  userData.user.name,
-                  style: TextStyle(
-                    fontSize: mediaQuery.textScaleFactor * 25,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-              ],
-                            ),
-                          ),
-            ),
-                       Expanded(
-                         child: Column(
-                          children: [
-             ListTile(
-            leading: const Icon(Icons.add),
-            title: Text(
-              'Add Task',
-              style: TextStyle(
-                color: darkTheme.isDark ? Colors.white : Colors.black,
+            DrawerHeader(
+                          padding: const EdgeInsets.all(0),
+                          margin: const EdgeInsets.all(0),
+                          decoration: BoxDecoration(color: themeData.primary),
+                          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: 50,
+                backgroundColor: themeData.secondary,
+                backgroundImage: userData.user.image.isEmpty
+                    ? null
+                    : NetworkImage(userData.user.image),
               ),
-            ),
-            onTap: () {
-              Navigator.pop(context);
-              Navigator.pushNamed(
-                context,
-                AddTask.routeName,
-              );
-            },
-                          ),
-          ListTile(
-            leading: const Icon(Icons.edit),
-            title: Text(
-              'Add Notes',
-              style: TextStyle(
-                color: darkTheme.isDark ? Colors.white : Colors.black,
+              const SizedBox(
+                height: 10,
               ),
-            ),
-            onTap: () {
-              Navigator.of(context).pop();
-              Navigator.pushNamed(
-                context,
-                AddNote.routeName,
-              );
-            },
-                          ),
-                          ListTile(
-            leading: const Icon(Icons.nightlight),
-            title: Text(
-              'Dark Mode',
-              style: TextStyle(
-                color: darkTheme.isDark ? Colors.white : Colors.black,
+              Text(
+                userData.user.name,
+                style: TextStyle(
+                  fontSize: mediaQuery.textScaleFactor * 25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
               ),
-            ),
-            trailing: Switch(
-              activeTrackColor: Colors.white,
-              value: darkTheme.isDark,
-              onChanged: (value) {
-                setState(() {
-                  darkTheme.setTheme(value);
-                });
-              },
-            ),
+            ],
                           ),
-                          ],
-                         ),
+                        ),
+                       Column(
+                        children: [
+                                    ListTile(
+                                   leading: const Icon(Icons.add),
+                                   title: Text(
+                                     'Add Task',
+                                     style: TextStyle(
+                                       color: darkTheme.isDark ? Colors.white : Colors.black,
+                                     ),
+                                   ),
+                                   onTap: () {
+                                     Navigator.pop(context);
+                                     Navigator.pushNamed(
+                                       context,
+                                       AddTask.routeName,
+                                     );
+                                   },
+                        ),
+                                 ListTile(
+                                   leading: const Icon(Icons.edit),
+                                   title: Text(
+                                     'Add Notes',
+                                     style: TextStyle(
+                                       color: darkTheme.isDark ? Colors.white : Colors.black,
+                                     ),
+                                   ),
+                                   onTap: () {
+                                     Navigator.of(context).pop();
+                                     Navigator.pushNamed(
+                                       context,
+                                       AddNote.routeName,
+                                     );
+                                   },
+                        ),
+                        ListTile(
+                                   leading: const Icon(Icons.nightlight),
+                                   title: Text(
+                                     'Dark Mode',
+                                     style: TextStyle(
+                                       color: darkTheme.isDark ? Colors.white : Colors.black,
+                                     ),
+                                   ),
+                                   trailing: Switch(
+                                     activeTrackColor: Colors.white,
+                                     value: darkTheme.isDark,
+                                     onChanged: (value) {
+                                       setState(() {
+                                         darkTheme.setTheme(value);
+                                       });
+                                     },
+                                   ),
+                        ),
+                        ],
                        ),
                        Divider(),
              ListTile(
