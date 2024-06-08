@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '/widget/percentage_card.dart';
-import '/widget/task_groups.dart';
-import '/widget/task_builder.dart';
-import '/widget/my_drawer.dart';
-
+import '../../Widgets/drawer.dart';
+import '../../Widgets/percentage_card';
+import '../../Widgets/task_builder.dart';
+import '../../Widgets/task_group.dart';
 class UserTaskScreen extends StatelessWidget {
   static const routeName = '/user-task';
   const UserTaskScreen({super.key});

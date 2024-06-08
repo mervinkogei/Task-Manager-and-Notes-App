@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '/widget/task_builder.dart';
-import '/widget/my_drawer.dart';
+import '../../Widgets/drawer.dart';
+import '../../Widgets/task_builder.dart';
 
 class AllTask extends StatelessWidget {
   const AllTask({super.key});

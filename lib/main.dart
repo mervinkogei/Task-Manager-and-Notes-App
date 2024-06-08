@@ -2,20 +2,55 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'Screens/notes/add_notes.dart';
+import 'Screens/notes/user_notes_screen.dart';
+import 'Screens/splash_screen.dart';
+import 'Screens/tabs_screen.dart';
+import 'Screens/tasks/add_task_screen.dart';
+import 'Screens/tasks/user_task_screen.dart';
+import 'Screens/user_add_screen.dart';
+import 'Screens/user_detail_screen.dart';
+import 'Widgets/app_theme.dart';
+import 'helper/scroll_behaviour.dart';
+import 'providers/auth.dart';
+import 'providers/notes_provider.dart';
+import 'providers/task_provider.dart';
+import 'providers/user_provider.dart';
+
 void main() async{
     WidgetsFlutterBinding.ensureInitialized();
-     final deviceInfo = await DeviceInfoPlugin().deviceInfo;
-     final androidSdkVersion =
-      deviceInfo is AndroidDeviceInfo ? deviceInfo.version.sdkInt : 0;
-  runApp( MyApp(androidSdkVersion: androidSdkVersion));
+     
+  runApp( MyApp());
 }
 
-class MyApp extends StatelessWidget {
-   MyApp({Key? key, required this.androidSdkVersion}) : super(key: key);
-  final int androidSdkVersion;
+class MyApp extends StatefulWidget {
+   MyApp({Key? key, }) : super(key: key);
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  late final int sdkVersion;
+
+  launchApp() async{
+     final deviceInfo = await DeviceInfoPlugin().deviceInfo;
+    final androidSdkVersion =
+      deviceInfo is AndroidDeviceInfo ? deviceInfo.version.sdkInt : 0;
+      setState(() {
+        sdkVersion = androidSdkVersion;
+      });
+  }
+
+
+  @override
+  void initState() {
+    launchApp();
+    super.initState();
+  }
+  @override
   Widget build(BuildContext context) {
+    
     return MaterialApp(
       title: 'Task Manager - Notes App',
       debugShowCheckedModeBanner: false,      
@@ -23,13 +58,15 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LandingPage(),
+      home:  LandingPage(androidSdkVersion: sdkVersion),
     );
   }
 }
 
 class LandingPage extends StatefulWidget {
-  const LandingPage({super.key});
+  // const LandingPage({super.key});
+  LandingPage({Key? key, required this.androidSdkVersion}) : super(key: key);
+  final int androidSdkVersion;
 
   @override
   State<LandingPage> createState() => _LandingPageState();

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../screens/user_add_screen.dart';
+import 'user_add_screen.dart';
+
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -17,7 +18,7 @@ class SplashScreen extends StatelessWidget {
         children: [
           if (!isLandscape)
             Image.asset(
-              'assets/images/splashimg.png',
+              'assets/splashimg.png',
               fit: BoxFit.contain,
             ),
           Text(

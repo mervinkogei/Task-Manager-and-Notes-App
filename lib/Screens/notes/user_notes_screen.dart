@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '/widget/my_drawer.dart';
-import '/widget/notes_builder.dart';
+import '../../Widgets/drawer.dart';
+import '../../Widgets/notes_builder.dart';
 
 class UserNoteScreen extends StatelessWidget {
   static const routeName = '/user-notes';

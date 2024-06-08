@@ -3,7 +3,7 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
 
-import '/providers/tasks_provider.dart';
+import '../../providers/task_provider.dart';
 import '/helper/notification_service.dart';
 
 class AddTask extends StatefulWidget {
@@ -350,7 +350,7 @@ class _AddTaskState extends State<AddTask> {
         dismissOnBackKeyPress: false,
         dismissOnTouchOutside: false,
         context: context,
-        dialogType: DialogType.INFO,
+        dialogType: DialogType.info,
         title: 'Add a title to the task!',
         btnOkOnPress: () {
           Navigator.of(context).pop;

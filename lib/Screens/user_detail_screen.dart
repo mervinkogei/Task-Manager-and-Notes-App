@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
 
+import '../Widgets/drawer.dart';
+import '../providers/task_provider.dart';
 import '../providers/user_provider.dart';
 import '../screens/splash_screen.dart';
 import '../providers/auth.dart';
-import '../providers/tasks_provider.dart';
-import '../widget/my_drawer.dart';
 import '../providers/notes_provider.dart';
 import '../screens/tabs_screen.dart';
 import '../helper/notification_service.dart';
@@ -322,7 +322,7 @@ class _UserDetailScreenState extends State<UserDetailScreen> {
       dismissOnBackKeyPress: false,
       dismissOnTouchOutside: false,
       context: context,
-      dialogType: DialogType.INFO,
+      dialogType: DialogType.info,
       title: 'This will delete your all data!',
       btnOkOnPress: () {
         Navigator.of(context).pushReplacement(

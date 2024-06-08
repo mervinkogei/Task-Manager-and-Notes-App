@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../screens/user_detail_screen.dart';
 import '../screens/tasks/user_task_screen.dart';
 import '../screens/tasks/all_task_screen.dart';
 import '../screens/tasks/add_task_screen.dart';
-import '../screens/notes/user_note_screen.dart';
-import '../screens/notes/add_note_screen.dart';
 import '../providers/user_provider.dart';
+import 'notes/add_notes.dart';
+import 'notes/user_notes_screen.dart';
+import 'user_detail_screen.dart';
 
 class Tabs extends StatefulWidget {
   static const routeName = '/tabs-page';

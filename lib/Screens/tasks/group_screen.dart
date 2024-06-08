@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:task_master/widget/task_builder.dart';
+
+import '../../Widgets/task_builder.dart';
 
 class GroupScreen extends StatelessWidget {
   final String groupName;
@@ -19,7 +20,7 @@ class GroupScreen extends StatelessWidget {
               background: Padding(
                 padding: const EdgeInsets.only(top: 50),
                 child: Image.asset(
-                  'assets/images/${groupName.toLowerCase()}.png',
+                  'assets/${groupName.toLowerCase()}.png',
                   fit: BoxFit.contain,
                 ),
               ),
