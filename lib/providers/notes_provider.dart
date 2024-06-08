@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../models/user_notes.dart';
 import '../helper/db_helper_notes.dart';
+import '../models/user_notes_model.dart';
 
 class NotesProvider extends ChangeNotifier {
   List<UserNote> _userList = [];

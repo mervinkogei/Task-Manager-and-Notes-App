@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:provider/provider.dart';
 
+import '../Screens/notes/edit_notes.dart';
 import '../providers/notes_provider.dart';
-import '../screens/notes/edit_note_screen.dart';
 
 class NotesBuilder extends StatefulWidget {
   const NotesBuilder({super.key});

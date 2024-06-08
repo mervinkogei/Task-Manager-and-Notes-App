@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
+import '../Screens/notes/add_notes.dart';
 import '../providers/user_provider.dart';
 import '../screens/tasks/add_task_screen.dart';
-import '../screens/notes/add_note_screen.dart';
 
 class MyDrawer extends StatefulWidget {
   const MyDrawer({super.key});

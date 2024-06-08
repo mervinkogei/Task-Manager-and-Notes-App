@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../providers/tasks_provider.dart';
+import '../providers/task_provider.dart';
 import '../screens/tasks/group_screen.dart';
 
 class TaskGroups extends StatelessWidget {
