@@ -61,7 +61,11 @@ class _UserAddScreenState extends State<UserAddScreen> {
         child: Column(
           children: [
             SizedBox(
-              height: mediaQuery.size.height * 0.1,
+              height: mediaQuery.size.height * 0.08,
+            ),
+            const Text('Please select your favorite avatar by swipping'),
+            SizedBox(
+              height: mediaQuery.size.height * 0.025,
             ),
             SizedBox(
               height: mediaQuery.size.height * 0.25,

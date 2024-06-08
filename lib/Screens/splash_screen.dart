@@ -24,8 +24,8 @@ class SplashScreen extends StatelessWidget {
           Text(
             'Task Management & To-Do List',
             textAlign: TextAlign.center,
-            style: GoogleFonts.oswald(
-              fontSize: mediaQuery.textScaleFactor * 27,
+            style: GoogleFonts.montserrat(
+              fontSize: mediaQuery.textScaleFactor * 20,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -34,8 +34,8 @@ class SplashScreen extends StatelessWidget {
             child: Text(
               'This productive tool is designed to help you better manage your task project-wise conveniently!',
               textAlign: TextAlign.center,
-              style: GoogleFonts.oswald(
-                fontSize: mediaQuery.textScaleFactor * 20,
+              style: GoogleFonts.caveat(
+                fontSize: mediaQuery.textScaleFactor * 24,
                 fontWeight: FontWeight.w500,
                 color: Colors.grey[600],
               ),
