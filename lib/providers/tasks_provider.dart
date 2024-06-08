@@ -7,9 +7,9 @@ class TasksProvider extends ChangeNotifier {
   List<UserTask> _userTaskList = [];
 
   final Map<String, String> _taskGroup = {
-    'self': 'assets/images/self.png',
-    'office': 'assets/images/office.png',
-    'home': 'assets/images/home.png',
+    'self': 'assets/self.png',
+    'office': 'assets/office.png',
+    'home': 'assets/home.png',
   };
 
   double totalPerc = 0.00;

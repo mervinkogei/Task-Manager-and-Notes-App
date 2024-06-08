@@ -31,7 +31,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  late final int sdkVersion;
+  int sdkVersion =0;
 
   launchApp() async{
      final deviceInfo = await DeviceInfoPlugin().deviceInfo;

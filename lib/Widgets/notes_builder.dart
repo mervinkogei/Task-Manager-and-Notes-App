@@ -56,7 +56,7 @@ class _NotesBuilderState extends State<NotesBuilder> {
                       width: mediaQuery.size.width * 0.7,
                       height: mediaQuery.size.width * 0.5,
                       child: Image.asset(
-                        'assets/images/notask.png',
+                        'assets/notask.png',
                         fit: BoxFit.cover,
                       ),
                     ),
